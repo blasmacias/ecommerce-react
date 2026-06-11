@@ -1,0 +1,23 @@
+.item-list-container {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.item-list-container__header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.item-list-container__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.item-list-container__count {
+  font-size: 0.85rem;
+  color: var(--text3);
+  font-family: var(--font-mono);
+}
