@@ -1,16 +1,47 @@
-# React + Vite
+# NexusStore - E-commerce React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce desarrollado con React JS y Firebase como proyecto final del curso.
 
-Currently, two official plugins are available:
+## Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- React Router DOM
+- Firebase / Firestore
+- Context API
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Listado de productos por categoría
+- Vista de detalle de producto
+- Carrito de compras con Context
+- Checkout con validación de formulario
+- Generación de orden en Firestore
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio
+2. Instalar dependencias: `npm install`
+3. Crear archivo `.env` con las credenciales de Firebase (ver `.env.example`)
+4. Correr el proyecto: `npm run dev`
+
+## Estructura de componentes
+App
+├── NavBar
+│   └── CartWidget
+├── ItemListContainer
+│   └── ItemList
+│       └── Item
+├── ItemDetailContainer
+│   └── ItemDetail
+│       └── ItemCount
+├── Cart
+│   └── CartItem
+└── CheckoutForm\
+
+## Decisiones de diseño
+
+- Se utilizó Context API para el manejo global del carrito
+- Se separaron los componentes contenedores de los presentacionales
+- Custom hook `useProducts` para abstraer la lógica de Firestore
+- Firestore como base de datos para productos y órdenes.
